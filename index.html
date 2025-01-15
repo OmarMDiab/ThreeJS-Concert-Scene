@@ -2,23 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>My first three.js app</title>
+    <title>My three.js App</title>
     <style>
       body {
         margin: 0;
       }
+      #loading-screen {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        z-index: 9999;
+      }
     </style>
     <script type="importmap">
       {
-      "imports": {
-        "three": "https://cdn.jsdelivr.net/npm/three@0.172.0/build/three.module.js",
-        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.172.0/examples/jsm/",
-        "three/examples/jsm/loaders/GLTFLoader": "https://cdn.jsdelivr.net/npm/three@0.172.0/examples/jsm/loaders/GLTFLoader.js"
-      }
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.172.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.172.0/examples/jsm/",
+          "three/examples/jsm/loaders/GLTFLoader": "https://cdn.jsdelivr.net/npm/three@0.172.0/examples/jsm/loaders/GLTFLoader.js"
+        }
       }
     </script>
   </head>
   <body>
+    <div id="loading-screen">Loading, please wait...</div>
     <div id="container"></div>
     <script type="module" src="/main.js"></script>
   </body>
